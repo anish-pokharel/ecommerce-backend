@@ -3,7 +3,7 @@ const router = express.Router();
 const Product = require('../models/Product');
 
 // Create
-router.post('/', async (req, res) => {
+router.post('/addproducts', async (req, res) => {
   const product = new Product(req.body);
   await product.save();
   res.json(product);
