@@ -15,7 +15,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use(auth);
-app.use(cart);
+// app.use(cart);
+app.use('/cart', cart);
 app.use(orders);
 app.use(products);
 
